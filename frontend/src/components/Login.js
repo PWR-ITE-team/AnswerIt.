@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from './images/logo.png';
+import { Link } from 'react-router-dom';
 import { ReactComponent as EyeShow } from './images/eye-show.svg';
 import { ReactComponent as EyeHide } from './images/eye-hide.svg';
 
@@ -37,7 +38,9 @@ export default function Login() {
             </span>
             </div>
 
-          <button className="login-confirm-btn">Confirm</button>
+            <Link to="/quiz">
+  <button className="login-confirm-btn">Confirm</button>
+</Link>
         </div>
       </div>
     </div>

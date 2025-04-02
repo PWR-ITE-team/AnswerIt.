@@ -1,0 +1,188 @@
+.quiz-cards-container {
+  max-width: 1400px;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 40px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.quiz-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-family: "Montserrat", sans-serif;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .quiz-card-content {
+    margin-bottom: 20px;
+
+    .play-quiz-btn {
+      padding: 12px 20px;
+      background: linear-gradient(
+        61deg,
+        rgba(148, 69, 252, 1) 31%,
+        rgba(69, 106, 252, 1) 98%
+      );
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-family: "Montserrat", sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    .quiz-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .quiz-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .quiz-difficulty {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+.quiz-actions {
+  max-width: 1400px;
+  margin: 40px auto 0;
+  padding: 0 40px;
+  text-align: right;
+}
+
+.create-quiz-btn {
+  padding: 12px 20px;
+  background: linear-gradient(
+    61deg,
+    rgba(148, 69, 252, 1) 31%,
+    rgba(69, 106, 252, 1) 98%
+  );
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  .modal {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    font-family: "Montserrat", sans-serif;
+
+    .modal-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .modal-input {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-bottom: 15px;
+      font-family: "Montserrat", sans-serif;
+      box-sizing: border-box;
+
+      &:focus {
+        outline: none;
+        border-color: rgba(69, 106, 252, 1);
+        box-shadow: 0 0 5px rgba(69, 106, 252, 0.4);
+      }
+    }
+
+    .modal-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+
+      .modal-btn {
+        flex: 1;
+        padding: 12px 0;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: "Montserrat", sans-serif;
+        cursor: pointer;
+        transition: 0.3s;
+        border: none;
+        max-width: 150px;
+        text-align: center;
+      }
+
+      .confirm {
+        background: linear-gradient(
+          61deg,
+          rgba(148, 69, 252, 1) 31%,
+          rgba(69, 106, 252, 1) 98%
+        );
+        color: #fff;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+
+      .cancel {
+        background: #eee;
+        color: #333;
+
+        &:hover {
+          background: #ddd;
+        }
+      }
+    }
+  }
+}
